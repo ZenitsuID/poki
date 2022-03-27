@@ -13,3 +13,4 @@ task:
   Build_script:
       - git clone --depth=1 -b oldcam-hmp https://github.com/ZenitsuID/kernel_xiaomi_lavender lv && cd lv
       - bash build.sh --azure
+
