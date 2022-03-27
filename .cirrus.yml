@@ -1,15 +1,15 @@
 env:
-    token: "ENCRYPTED[de78fc223d92eedcbc2deb1a07ff58c47653794edb7e89bed9c375108b68f7bb59db7b2ad3b4eb4fbb048e555976c446]"
-    chat_id: "ENCRYPTED[7c060fdbbe868a7529d8743a2d8d59f1386b7793b0d66dd84bb33d116dceb19c340510e106dea90d793fed43294158a6]"
+    token: "ENCRYPTED[22b1eb80cae393b24b7a29ae6f3bc75722d246234eb1c96fb492681c4e7c206bfba5acf89f0702f74f5ff22a614ba0d0]"
+    chat_id: "ENCRYPTED[5f8b2bfb95096cc6cfed34332e6fcf05f2e9eec60690d21615f5fa3d998f9cdd90da062d607f7930498ffc005ba632c7]"
     
 task:
   name: "Kernel deploy.."
   timeout_in: 2h
   container:
-      image: zenitsuxd/docker:cirrus
+      image: panchajanya1999/archlinux:latest
       cpu: 8
       memory: 32G
 
   Build_Kernel_script:
-      - git clone --depth=1 -b hmp-main https://github.com/ZenitsuID/android_kernel_xiaomi_lavender-LTO lv && cd lv
-      - bash build.sh --neutron
+      - git clone --depth=1 -b hmp-main https://github.com/projects-nexus/android_kernel_xiaomi_lavender-LTO lv && cd lv
+      - bash build.sh --azure
