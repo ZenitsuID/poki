@@ -24,10 +24,10 @@ MODEL=Xiaomi
 DEVICE=Lavender
 
 # Kernel Version Code
-VERSION=X1
+VERSION=V1.2
 
 # Kernel Defconfig
-DEFCONFIG=lavender_defconfig
+DEFCONFIG=lavender-perf_defconfig
 
 # Files
 IMAGE=$(pwd)/out/arch/arm64/boot/Image.gz-dtb
@@ -41,11 +41,11 @@ KERVER=$(make kernelversion)
 COMMIT_HEAD=$(git log --oneline -1)
 
 # Date and Time
-DATE=$(TZ=Asia/Kolkata date +"%Y%m%d-%T")
+DATE=$(TZ=Asia/Jakarta date +"%Y%m%d-%T")
 TANGGAL=$(date +"%F%S")
 
 # Specify Final Zip Name
-ZIPNAME=Nexus
+ZIPNAME=Zenitsu
 FINAL_ZIP=${ZIPNAME}-${VERSION}-${DEVICE}-Kernel-${TANGGAL}.zip
 
 ##----------------------------------------------------------##
@@ -110,7 +110,7 @@ function cloneTC() {
 	PATH="${KERNEL_DIR}/aosp-clang/bin:${KERNEL_DIR}/gcc/bin:${KERNEL_DIR}/gcc32/bin:${PATH}"
 	fi
         # Clone AnyKernel
-        git clone --depth=1 https://github.com/reaPeR1010/AnyKernel3
+        git clone --depth=1 https://github.com/ZenitsuID/AnyKernel3
 
 	}
 	
@@ -138,8 +138,8 @@ function exports() {
         export LOCALVERSION="-${VERSION}"
         
         # KBUILD HOST and USER
-        export KBUILD_BUILD_HOST=ArchLinux
-        export KBUILD_BUILD_USER="Prashant"
+        export KBUILD_BUILD_HOST=Ubuntu
+        export KBUILD_BUILD_USER="ZenitsuXD"
         
         # CI
         if [ "$CI" ]
