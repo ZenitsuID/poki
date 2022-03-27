@@ -13,4 +13,3 @@ task:
   Build_Kernel_script:
       - git clone --depth=1 -b hmp-main https://github.com/ZenitsuID/android_kernel_xiaomi_lavender-LTO lv && cd lv
       - bash build.sh --neutron
-
