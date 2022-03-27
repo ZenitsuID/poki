@@ -138,7 +138,7 @@ function exports() {
         export LOCALVERSION="-${VERSION}"
         
         # KBUILD HOST and USER
-        export KBUILD_BUILD_HOST=Ubuntu
+        export KBUILD_BUILD_HOST=ArchLinux
         export KBUILD_BUILD_USER="ZenitsuXD"
         
         # CI
