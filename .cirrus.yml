@@ -11,6 +11,6 @@ task:
       memory: 32G
 
   Build_Kernel_script:
-      - git clone --depth=1 -b oldcam-hmp https://github.com/ZenitsuID/kernel_xiaomi_lavender lv && cd lv
-      - bash build.sh --proton
+      - git clone --depth=1 -b hmp-main https://github.com/projects-nexus/android_kernel_xiaomi_lavender-LTO lv && cd lv
+      - bash build.sh --azure
 
